@@ -17,12 +17,15 @@ body{
 }
 
 .player {
-    font: bold;
     font:italic;
     color:white;
     width:50%;
     text-align: center;
     font-size: 30px;
+}
+
+.player .active {
+    font-weight: bold;
 }
 
 .col {
@@ -33,5 +36,6 @@ body{
 }
 
 .col:hover{
+    cursor: pointer;
     background-color: rgb(168, 143, 0);
 }
