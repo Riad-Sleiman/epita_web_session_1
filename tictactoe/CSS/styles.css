@@ -24,8 +24,9 @@ body{
     font-size: 30px;
 }
 
-.player .active {
+.player.active {
     font-weight: bold;
+    color: rgb(168, 143, 0);
 }
 
 .col {
