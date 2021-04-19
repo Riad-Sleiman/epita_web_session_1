@@ -7,40 +7,18 @@
         <link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
     </head>
     <body>
-        <!--Title-->
-        <h1 style="color: white;">Let's Play</h1>
-        
-        <!--Name for the player-->
-        <div id="players">
-            <div class="player1 player active"><span class="p1_symbol">X</span>: <span>Player 1</span></div>
-            <div class="player2 player"><span class="p2_symbol">O</span>: <span>Player 2</span></div>
-        </div>
+        <h1 class="menu">Welcome to TIC TAC TOE</h1>
 
-        <div id="winLabel" class=" winLabel player" >
-            <button class="player active" type="button" onclick="window.location.reload();"></button>
-        </div>
-        <!--Table for the game-->        
-        <table id="table_game">
-            <tr>
-                <td class="col id00"></td>
-                <td class="col id01"></td>
-                <td class="col id02"></td>
-            </tr>
-            <tr>
-                <td class="col id10"></td>
-                <td class="col id11" ></td>
-                <td class="col id12"></td>
-            </tr>
-            <tr>
-                <td class="col id20"></td>
-                <td class="col id21"></td>
-                <td class="col id22"></td>
-            </tr>
-        </table>
+        <form>
+            <label class="menu" for="p1name">Player 1 Name:</label><br>
+            <input type="text" id="p1name" name="p1name"><br>
+            <label class="menu" for="p2name">Player 2 Name:</label><br>
+            <input type="text" id="p2name" name="p2name">
+        </form>
 
-        <!--Best Practice Load JS at the end-->
+        <a href="game.html"><button class="menu" onclick="onClickPlay()">PLAY</button></a>
+
         <script type="text/javascript" src="js/app.js"></script>
-
     </body>
 
 </html>

@@ -5,6 +5,12 @@ let isPlaying = true;
 let winLabel = document.getElementById('winLabel');
 winLabel.style.display = 'none';
 
+function onClickPlay(){
+    localStorage.setItem('pl1', document.getElementById("p1name").value);
+    localStorage.setItem('pl2', document.getElementById("p2name").value);
+}
+
+
 cols.forEach((col) =>{
     
     col.onclick = function(){
@@ -30,7 +36,10 @@ cols.forEach((col) =>{
                     if(latWinCount == 3 || longWinCount == 3){
                         isPlaying = false;
                         winLabel.style.display = '';
-                        winLabel.querySelector('.player').innerHTML = "Player "+current_player+" wins. Click to restart";
+                        if(symbol == "X")
+                            winLabel.querySelector('.player').innerHTML = localStorage.getItem('pl1')+" wins. Click to restart";
+                        else
+                            winLabel.querySelector('.player').innerHTML = localStorage.getItem('pl2')+" wins. Click to restart";
                         console.log("Player "+current_player+" wins");
                     }
                     
@@ -43,7 +52,10 @@ cols.forEach((col) =>{
             if(document.querySelector(".id00").innerHTML == symbol && document.querySelector(".id11").innerHTML == symbol && document.querySelector(".id22").innerHTML == symbol
                 || document.querySelector(".id02").innerHTML == symbol && document.querySelector(".id11").innerHTML == symbol && document.querySelector(".id20").innerHTML == symbol){
                     winLabel.style.display = '';
-                    winLabel.querySelector('.player').innerHTML = "Player "+current_player+" wins. Click to restart";
+                    if(symbol == "X")
+                            winLabel.querySelector('.player').innerHTML = localStorage.getItem('pl1')+" wins. Click to restart";
+                        else
+                            winLabel.querySelector('.player').innerHTML = localStorage.getItem('pl2')+" wins. Click to restart";
                     isPlaying=false;
                 }       
 

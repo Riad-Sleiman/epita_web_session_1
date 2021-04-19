@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>TIC TAC TOE</title>    
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
+    </head>
+    <body>
+        <!--Title-->
+        <h1 style="color: white;">Let's Play</h1>
+        
+        <!--Name for the player-->
+        <div id="players">
+            <div class="player1 player active"><span class="p1_symbol">X</span>: <span>Player 1</span></div>
+            <div class="player2 player"><span class="p2_symbol">O</span>: <span>Player 2</span></div>
+        </div>
+
+        <div id="winLabel" class=" winLabel player" >
+            <button class="player active" type="button" onclick="window.location.reload();"></button>
+        </div>
+        <!--Table for the game-->        
+        <table id="table_game">
+            <tr>
+                <td class="col id00"></td>
+                <td class="col id01"></td>
+                <td class="col id02"></td>
+            </tr>
+            <tr>
+                <td class="col id10"></td>
+                <td class="col id11" ></td>
+                <td class="col id12"></td>
+            </tr>
+            <tr>
+                <td class="col id20"></td>
+                <td class="col id21"></td>
+                <td class="col id22"></td>
+            </tr>
+        </table>
+
+        <!--Best Practice Load JS at the end-->
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </body>
+
+</html>

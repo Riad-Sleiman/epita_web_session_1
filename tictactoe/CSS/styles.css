@@ -40,3 +40,8 @@ body{
     cursor: pointer;
     background-color: rgb(168, 143, 0);
 }
+
+.menu{
+    color:white;
+    background-color: rgb(24, 3, 58);
+}
