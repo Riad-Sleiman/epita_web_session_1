@@ -39,8 +39,9 @@ cols.forEach((col) =>{
                 longWinCount = 0;
             }
             //checks the diagonal win
-            if(document.querySelector(".id00") == symbol && document.querySelector(".id11") == symbol && document.querySelector(".id22") == symbol
-                || document.querySelector(".id02") == symbol && document.querySelector(".id11") == symbol && document.querySelector(".id20") == symbol){
+
+            if(document.querySelector(".id00").innerHTML == symbol && document.querySelector(".id11").innerHTML == symbol && document.querySelector(".id22").innerHTML == symbol
+                || document.querySelector(".id02").innerHTML == symbol && document.querySelector(".id11").innerHTML == symbol && document.querySelector(".id20").innerHTML == symbol){
                     winLabel.style.display = '';
                     winLabel.querySelector('.player').innerHTML = "Player "+current_player+" wins. Click to restart";
                     isPlaying=false;
