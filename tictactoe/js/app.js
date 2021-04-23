@@ -5,13 +5,7 @@ let isPlaying = true;
 let winLabel = document.getElementById('winLabel');
 winLabel.style.display = 'none';
 
-function onClickPlay(){
-    localStorage.setItem('pl1', document.getElementById("p1name").value);
-    localStorage.setItem('pl2', document.getElementById("p2name").value);
-    localStorage.setItem("score1",0);
-    localStorage.setItem("score2",0);
-    
-}
+
 
 document.querySelector('.p1_name').innerHTML = localStorage.getItem('pl1') + " "+ localStorage.getItem("score1");
 document.querySelector('.p2_name').innerHTML = localStorage.getItem('pl2') + " "+ localStorage.getItem("score2");
