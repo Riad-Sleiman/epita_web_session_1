@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 
-const productRoutes = require('./routes/productsRoutes')
+const tweetRoutes = require('./routes/tweetRoutes')
 const notFound = require('./middlewares/notFound')
 const errorHandler = require('./middlewares/errorHandler')
 const connectDB = require('./middlewares/connectDB')
@@ -20,10 +20,10 @@ app.use(express.static('public'))
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.status(200).send('It works !')
+    res.status(200).send('Default Page')
 })
 
-app.use('/products',productRoutes)
+app.use('/tweets',tweetRoutes)
 
 app.use(notFound)
 
